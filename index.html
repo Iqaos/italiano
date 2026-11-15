@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quattro rivoluzioni industriali — dal vapore all'intelligenza artificiale</title>
+<meta name="description" content="Un viaggio illustrato e interattivo tra la prima, la seconda, la terza e la quarta rivoluzione industriale: macchina a vapore, catena di montaggio, microchip e intelligenza artificiale.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23191714'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23f7f2e8' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23f7f2e8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-era="1">
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="12" r="8.5"/>
+          <path d="M12 3.5v3M12 17.5v3M3.5 12h3M17.5 12h3"/>
+          <circle cx="12" cy="12" r="2.4"/>
+        </svg>
+      </span>
+      <span class="brand-text">Rivoluzioni <em>Industriali</em></span>
+    </a>
+
+    <nav class="era-nav" aria-label="Capitoli">
+      <a class="era-pill is-active" href="#prima" data-nav="1" aria-current="true"><span class="pill-num">I</span><span class="pill-label">Vapore</span></a>
+      <a class="era-pill" href="#seconda" data-nav="2"><span class="pill-num">II</span><span class="pill-label">Elettricità</span></a>
+      <a class="era-pill" href="#terza" data-nav="3"><span class="pill-num">III</span><span class="pill-label">Digitale</span></a>
+      <a class="era-pill" href="#quarta" data-nav="4"><span class="pill-num">IV</span><span class="pill-label">Intelligenza</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Dalla metà del Settecento a oggi</p>
+        <h1>Quattro rivoluzioni.<br><em>Un solo filo.</em></h1>
+        <p class="lede">Dal vapore che muoveva i telai all'intelligenza artificiale che scrive, diagnostica e progetta. Un percorso tra macchine, energia, dati e persone: come il lavoro è cambiato quattro volte, e perché la quinta è già iniziata.</p>
+        <div class="hero-actions">
+          <a href="#prima" class="btn btn-primary">Inizia il viaggio <span aria-hidden="true">→</span></a>
+        </div>
+        <dl class="hero-facts">
+          <div><dt>Rivoluzioni</dt><dd data-count="4">4</dd></div>
+          <div><dt>Anni di storia</dt><dd><span data-count="260">260</span>+</dd></div>
+          <div><dt>Tecnologie 4.0</dt><dd data-count="7">7</dd></div>
+        </dl>
+      </div>
+
+      <div class="hero-art">
+        <svg class="dial" viewBox="0 0 560 560" role="img" aria-label="Quadrante con le quattro rivoluzioni industriali e le rispettive date">
+          <defs>
+            <radialGradient id="dialGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#a85212" stop-opacity=".16"/>
+              <stop offset="55%" stop-color="#0d6f68" stop-opacity=".07"/>
+              <stop offset="100%" stop-color="#5b3dc8" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="dialArc" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#a85212"/>
+              <stop offset=".38" stop-color="#6f7a34"/>
+              <stop offset=".68" stop-color="#0d6f68"/>
+              <stop offset="1" stop-color="#5b3dc8"/>
+            </linearGradient>
+          </defs>
+
+          <circle cx="280" cy="280" r="252" fill="url(#dialGlow)"/>
+          <g class="dial-spin">
+            <circle cx="280" cy="280" r="244" fill="none" stroke="url(#dialArc)" stroke-width="1.5" stroke-dasharray="1 11"/>
+          </g>
+          <g class="dial-spin-rev">
+            <circle cx="280" cy="280" r="222" fill="none" stroke="currentColor" stroke-width="14" stroke-dasharray="1 30" opacity=".12"/>
+          </g>
+          <circle cx="280" cy="280" r="196" fill="none" stroke="currentColor" stroke-opacity=".16"/>
+
+          <g class="dial-hand" id="dialHand">
+            <line x1="280" y1="280" x2="280" y2="86" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5" opacity=".55"/>
+            <circle cx="280" cy="86" r="5" fill="currentColor"/>
+          </g>
+
+          <g class="dial-node n1"><circle cx="140" cy="140" r="30"/><text x="140" y="148">I</text></g>
+          <g class="dial-node n2"><circle cx="420" cy="140" r="30"/><text x="420" y="148">II</text></g>
+          <g class="dial-node n3"><circle cx="420" cy="420" r="30"/><text x="420" y="428">III</text></g>
+          <g class="dial-node n4"><circle cx="140" cy="420" r="30"/><text x="140" y="428">IV</text></g>
+
+          <text x="140" y="196" class="dial-year">1760</text>
+          <text x="420" y="196" class="dial-year">1870</text>
+          <text x="420" y="478" class="dial-year">1970</text>
+          <text x="140" y="478" class="dial-year">2011</text>
+
+          <circle cx="280" cy="280" r="146" fill="var(--paper-2)" stroke="var(--line)"/>
+          <text x="280" y="266" class="dial-eyebrow">DAL 1760 A OGGI</text>
+          <text x="280" y="314" class="dial-big">1760</text>
+          <text x="280" y="342" class="dial-sub">→ OGGI</text>
+        </svg>
+
+        <ul class="dial-legend">
+          <li><span class="dot d1" aria-hidden="true"></span><span class="yr">1760</span><span class="nm">Vapore</span></li>
+          <li><span class="dot d2" aria-hidden="true"></span><span class="yr">1870</span><span class="nm">Elettricità</span></li>
+          <li><span class="dot d3" aria-hidden="true"></span><span class="yr">1970</span><span class="nm">Digitale</span></li>
+          <li><span class="dot d4" aria-hidden="true"></span><span class="yr">2011</span><span class="nm">Intelligenza</span></li>
+        </ul>
+        <p class="dial-caption">L'energia cambia forma, il problema resta lo stesso: fare di più con meno.</p>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>1760 · decollo tessile</span><span class="sep">✦</span>
+        <span>1769 · Watt brevetta il condensatore</span><span class="sep">✦</span>
+        <span>1825 · prima ferrovia pubblica</span><span class="sep">✦</span>
+        <span>1879 · luce elettrica</span><span class="sep">✦</span>
+        <span>1913 · catena di montaggio</span><span class="sep">✦</span>
+        <span>1947 · transistor</span><span class="sep">✦</span>
+        <span>1969 · ARPANET</span><span class="sep">✦</span>
+        <span>1971 · Intel 4004</span><span class="sep">✦</span>
+        <span>1989 · World Wide Web</span><span class="sep">✦</span>
+        <span>2011 · Industria 4.0</span><span class="sep">✦</span>
+        <span>2016 · Schwab</span><span class="sep">✦</span>
+        <span>oggi · intelligenza artificiale</span><span class="sep">✦</span>
+        <span>1760 · decollo tessile</span><span class="sep">✦</span>
+        <span>1769 · Watt brevetta il condensatore</span><span class="sep">✦</span>
+        <span>1825 · prima ferrovia pubblica</span><span class="sep">✦</span>
+        <span>1879 · luce elettrica</span><span class="sep">✦</span>
+        <span>1913 · catena di montaggio</span><span class="sep">✦</span>
+        <span>1947 · transistor</span><span class="sep">✦</span>
+        <span>1969 · ARPANET</span><span class="sep">✦</span>
+        <span>1971 · Intel 4004</span><span class="sep">✦</span>
+        <span>1989 · World Wide Web</span><span class="sep">✦</span>
+        <span>2011 · Industria 4.0</span><span class="sep">✦</span>
+        <span>2016 · Schwab</span><span class="sep">✦</span>
+        <span>oggi · intelligenza artificiale</span><span class="sep">✦</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIMA ============ -->
+  <section class="era" id="prima" data-era="1">
+    <div class="wrap">
+      <header class="era-head reveal">
+        <div class="era-head-copy">
+          <p class="era-kicker"><span class="era-badge">I</span> Metà Settecento — 1840 · Gran Bretagna</p>
+          <h2 class="era-title">La prima rivoluzione:<br><em>il vapore</em></h2>
+          <p class="era-sub">Il carbone, il ferro e la fabbrica. Per la prima volta l'energia di una macchina sostituisce quella dei muscoli.</p>
+        </div>
+        <figure class="era-art">
+          <svg viewBox="0 0 420 340" class="art-svg" aria-hidden="true">
+            <g class="sky-rays" stroke="currentColor" stroke-width="1.2" opacity=".5">
+              <line x1="338" y1="38" x2="338" y2="24"/>
+              <line x1="338" y1="114" x2="338" y2="128"/>
+              <line x1="300" y1="76" x2="286" y2="76"/>
+              <line x1="376" y1="76" x2="390" y2="76"/>
+              <line x1="311" y1="49" x2="301" y2="39"/>
+              <line x1="365" y1="103" x2="375" y2="113"/>
+              <line x1="365" y1="49" x2="375" y2="39"/>
+              <line x1="311" y1="103" x2="301" y2="113"/>
+            </g>
+            <circle cx="338" cy="76" r="30" fill="var(--accent)" opacity=".16"/>
+            <circle cx="338" cy="76" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+
+            <g class="smoke" fill="currentColor" opacity=".22">
+              <circle cx="292" cy="62" r="10" class="puff-s p1"/>
+              <circle cx="300" cy="44" r="13" class="puff-s p2"/>
+              <circle cx="312" cy="26" r="9" class="puff-s p3"/>
+            </g>
+
+            <path d="M56 286 V196 L96 170 L136 196 L136 170 L176 144 L216 170 L216 144 L256 118 L296 144 V286 Z"
+                  fill="var(--accent-soft)" fill-opacity=".65" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            <rect x="272" y="66" width="28" height="126" fill="var(--accent-soft)" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="272" y1="96" x2="300" y2="96" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+            <line x1="272" y1="126" x2="300" y2="126" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+
+            <g fill="currentColor" opacity=".28">
+              <rect x="76" y="212" width="18" height="24"/>
+              <rect x="108" y="212" width="18" height="24"/>
+              <rect x="140" y="212" width="18" height="24"/>
+              <rect x="172" y="212" width="18" height="24"/>
+              <rect x="204" y="212" width="18" height="24"/>
+              <rect x="236" y="212" width="18" height="24"/>
+              <rect x="76" y="250" width="18" height="20"/>
+              <rect x="204" y="250" width="18" height="20"/>
+              <rect x="236" y="250" width="18" height="20"/>
+            </g>
+            <rect x="128" y="240" width="30" height="46" fill="currentColor" opacity=".35"/>
+            <line x1="20" y1="286" x2="400" y2="286" stroke="currentColor" stroke-width="1.5"/>
+
+            <g class="birds" stroke="currentColor" stroke-width="1.6" fill="none" opacity=".5">
+              <path d="M70 96 q6 -6 12 0 q6 -6 12 0"/>
+              <path d="M104 74 q5 -5 10 0 q5 -5 10 0"/>
+            </g>
+            <text x="382" y="318" class="art-sign">1760</text>
+          </svg>
+          <figcaption>La fabbrica a vapore: camino, telai, carbone.</figcaption>
+        </figure>
+      </header>
+
+      <div class="photo-strip reveal">
+        <p class="photo-kicker">Immagini dal vero · Prima rivoluzione</p>
+        <div class="photo-grid">
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/prima-motore-vapore.jpg" alt="Macchina a vapore Watt con trave bilanciere e grande volano, esposta in un museo" width="1024" height="760" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">La macchina a vapore di Watt: il motore che liberò le fabbriche dalla forza dell'acqua.</span>
+              <span class="photo-credit">Foto: Nicolás Pérez · <a href="https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · CC BY-SA 3.0</span>
+            </figcaption>
+          </figure>
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/prima-filanda.jpg" alt="Filatoio meccanico Mule Jenny esposto al Museo industriale di Gand" width="1400" height="788" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">Una mule jenny: la filatura meccanica che moltiplicò la produzione di tessuti.</span>
+              <span class="photo-credit">Foto: Paul Hermans · <a href="https://commons.wikimedia.org/wiki/File:Mule_Jenny_Industriemuseum_Gent_18-11-2019_13-49-24.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · pubblico dominio</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="era-body">
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>01</span> Le premesse</p>
+          <div class="chapter-copy">
+            <h3>La rivoluzione agricola e demografica</h3>
+            <p>A metà del Settecento, in Gran Bretagna, nuove tecniche agricole e il sistema delle recinzioni (<em>Enclosures</em>) aumentarono la produzione alimentare. Più cibo significava più popolazione, e più popolazione significava più bocche da sfamare e più braccia da impiegare.</p>
+            <p>Moltissimi contadini, rimasti senza terra, si trasferirono nelle città in cerca di lavoro. La maggiore disponibilità di manodopera favorì lo sviluppo delle industrie e la diffusione della <strong>meccanizzazione</strong>, cioè l'uso di macchine per svolgere lavori che prima richiedevano forza umana.</p>
+            <blockquote class="pull">La fabbrica non nasce soltanto dalle macchine: nasce dalle persone che si spostano verso le macchine.</blockquote>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>02</span> Il decollo</p>
+          <div class="chapter-copy">
+            <h3>L'industria e l'energia a vapore</h3>
+            <p>Dal <strong>1760</strong> la rivoluzione industriale coinvolse soprattutto il settore tessile, dove nuove macchine aumentarono la produzione di filati e tessuti. La meccanizzazione si diffuse anche nella siderurgia, grazie all'impiego del carbone nella lavorazione del ferro.</p>
+            <p>Un ruolo fondamentale fu svolto dalla <strong>macchina a vapore</strong>, perfezionata da James Watt: trasformava il calore in energia meccanica e permetteva di alimentare gli impianti riducendo l'uso della forza umana, animale e idraulica. Da quel momento la fabbrica poteva nascere ovunque, non solo lungo un fiume.</p>
+            <div class="stats">
+              <div class="stat"><span class="stat-num">1760</span><span class="stat-label">decollo del settore tessile</span></div>
+              <div class="stat"><span class="stat-num">1769</span><span class="stat-label">brevetto del condensatore di Watt</span></div>
+              <div class="stat"><span class="stat-num">1840</span><span class="stat-label">vapore diffuso nei trasporti</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>03</span> La società</p>
+          <div class="chapter-copy">
+            <h3>Trasporti, calcolo e nuove classi</h3>
+            <p>Nell'Ottocento l'energia a vapore si diffuse anche nei trasporti, con le locomotive e i battelli a vapore: persone e merci viaggiavano più velocemente, i mercati si allargarono, le città crebbero.</p>
+            <p>Nello stesso periodo Charles Babbage progettò la <strong>macchina analitica</strong>, un calcolatore meccanico programmabile, mentre <strong>Ada Lovelace</strong> sviluppò un algoritmo destinato a essere eseguito dalla macchina: un'idea che anticipa alcuni principi dell'informatica moderna.</p>
+            <p>Intanto la società cambiò: si affermarono la borghesia imprenditoriale e il proletariato operaio, che iniziò a organizzarsi per ottenere migliori condizioni di lavoro.</p>
+          </div>
+        </article>
+
+        <div class="lab reveal" aria-labelledby="steamLabTitle">
+          <div class="lab-head">
+            <div>
+              <p class="lab-kicker">Laboratorio interattivo</p>
+              <h3 id="steamLabTitle">Anatomia della macchina a vapore</h3>
+            </div>
+            <button class="lab-toggle" id="steamToggle" type="button" aria-pressed="true">Ferma la macchina</button>
+          </div>
+
+          <div class="lab-tabs" role="tablist" aria-label="Parti della macchina a vapore">
+            <button class="steam-tab is-active" type="button" role="tab" aria-selected="true" data-part="caldaia">01 · Caldaia</button>
+            <button class="steam-tab" type="button" role="tab" aria-selected="false" data-part="pistone">02 · Pistone</button>
+            <button class="steam-tab" type="button" role="tab" aria-selected="false" data-part="volano">03 · Volano</button>
+            <button class="steam-tab" type="button" role="tab" aria-selected="false" data-part="condensatore">04 · Condensatore</button>
+          </div>
+
+          <div class="steam-stage" id="steamStage" data-running="true">
+            <svg viewBox="0 0 820 400" class="steam-svg" role="img" aria-label="Schema di una macchina a vapore con caldaia, pistone, volano e condensatore">
+              <g class="puffs" fill="currentColor" opacity=".35">
+                <circle cx="176" cy="92" r="9" class="puff p1"/>
+                <circle cx="176" cy="92" r="13" class="puff p2"/>
+                <circle cx="176" cy="92" r="7" class="puff p3"/>
+              </g>
+
+              <rect x="60" y="180" width="240" height="120" rx="16" class="metal"/>
+              <rect x="78" y="218" width="204" height="64" rx="8" class="water"/>
+              <rect x="60" y="300" width="240" height="44" rx="10" class="metal"/>
+              <path d="M86 340 l10 -24 10 24 z M112 340 l11 -30 11 30 z M140 340 l10 -22 10 22 z M166 340 l11 -28 11 28 z M194 340 l10 -24 10 24 z M220 340 l11 -26 11 26 z" class="flames"/>
+
+              <rect x="136" y="152" width="72" height="30" rx="8" class="metal"/>
+              <rect x="160" y="92" width="26" height="62" class="metal"/>
+              <line x1="155" y1="112" x2="191" y2="112" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+              <line x1="155" y1="132" x2="191" y2="132" stroke="currentColor" stroke-width="1.5" opacity=".5"/>
+
+              <line x1="300" y1="212" x2="355" y2="212" stroke="currentColor" stroke-width="14" stroke-linecap="round"/>
+              <rect x="355" y="168" width="160" height="100" rx="12" class="metal"/>
+              <g class="piston">
+                <rect x="392" y="186" width="22" height="64" rx="4" fill="currentColor" opacity=".75"/>
+                <rect x="414" y="212" width="150" height="7" rx="3" fill="currentColor" opacity=".55"/>
+              </g>
+              <rect x="355" y="300" width="160" height="46" rx="10" class="metal"/>
+              <line x1="435" y1="268" x2="435" y2="300" stroke="currentColor" stroke-width="3" opacity=".6"/>
+
+              <g class="flywheel">
+                <circle cx="640" cy="250" r="78" fill="none" stroke="currentColor" stroke-width="6"/>
+                <circle cx="640" cy="250" r="58" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".4"/>
+                <g stroke="currentColor" stroke-width="3" opacity=".7">
+                  <line x1="640" y1="178" x2="640" y2="322"/>
+                  <line x1="568" y1="250" x2="712" y2="250"/>
+                  <line x1="589" y1="199" x2="691" y2="301"/>
+                  <line x1="691" y1="199" x2="589" y2="301"/>
+                </g>
+                <circle cx="640" cy="250" r="12" fill="currentColor"/>
+              </g>
+
+              <line x1="30" y1="352" x2="790" y2="352" stroke="currentColor" stroke-width="1.5" opacity=".45"/>
+
+              <g class="hotspot is-active" data-part="caldaia" tabindex="0" role="button" aria-label="La caldaia">
+                <circle cx="112" cy="200" r="16"/><text x="112" y="206">1</text>
+              </g>
+              <g class="hotspot" data-part="pistone" tabindex="0" role="button" aria-label="Il pistone">
+                <circle cx="480" cy="196" r="16"/><text x="480" y="202">2</text>
+              </g>
+              <g class="hotspot" data-part="volano" tabindex="0" role="button" aria-label="Il volano">
+                <circle cx="640" cy="250" r="16"/><text x="640" y="256">3</text>
+              </g>
+              <g class="hotspot" data-part="condensatore" tabindex="0" role="button" aria-label="Il condensatore">
+                <circle cx="492" cy="323" r="16"/><text x="492" y="329">4</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="lab-panel" id="steamPanel" aria-live="polite">
+            <p class="lab-role" id="steamRole">01 · La fonte di energia</p>
+            <h4 id="steamTitle">La caldaia</h4>
+            <p id="steamText">Brucia carbone per portare l'acqua a ebollizione e produrre vapore ad alta pressione. È il cuore energetico della fabbrica: senza calore, nessun movimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECONDA ============ -->
+  <section class="era bridge" id="seconda" data-era="2">
+    <div class="wrap">
+      <header class="era-head reveal">
+        <div class="era-head-copy">
+          <p class="era-kicker"><span class="era-badge">II</span> 1870 — 1945 · Europa e Stati Uniti</p>
+          <h2 class="era-title">La seconda rivoluzione:<br><em>l'elettricità</em></h2>
+          <p class="era-sub">Acciaio, petrolio e corrente elettrica. Nasce la produzione di massa, e con essa il mondo dei consumi.</p>
+        </div>
+        <figure class="era-art">
+          <svg viewBox="0 0 420 340" class="art-svg" aria-hidden="true">
+            <circle cx="210" cy="150" r="112" fill="var(--accent)" opacity=".1" class="glow"/>
+            <g stroke="currentColor" stroke-width="2" opacity=".55">
+              <line x1="210" y1="42" x2="210" y2="18"/>
+              <line x1="210" y1="258" x2="210" y2="282"/>
+              <line x1="102" y1="150" x2="78" y2="150"/>
+              <line x1="318" y1="150" x2="342" y2="150"/>
+              <line x1="134" y1="74" x2="117" y2="57"/>
+              <line x1="286" y1="74" x2="303" y2="57"/>
+              <line x1="134" y1="226" x2="117" y2="243"/>
+              <line x1="286" y1="226" x2="303" y2="243"/>
+            </g>
+            <circle cx="210" cy="146" r="62" fill="var(--accent-soft)" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M190 146 q7 -22 14 0 t14 0 t14 0" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M186 196 h48 v12 h-48 z M192 214 h36 v8 h-36 z M196 228 h28 v6 h-28 z" fill="var(--accent-soft)" stroke="currentColor" stroke-width="2"/>
+            <path d="M330 232 l-24 44 h18 l-12 40 40 -52 h-20 z" fill="var(--accent)" opacity=".85"/>
+            <g class="gear-small" stroke="currentColor" stroke-width="2" fill="none" opacity=".7">
+              <circle cx="88" cy="276" r="26"/>
+              <circle cx="88" cy="276" r="10"/>
+              <path d="M88 246v-10M88 306v10M58 276h-10M118 276h10M67 255l-7-7M109 297l7 7M109 255l7-7M67 297l-7 7"/>
+            </g>
+            <text x="378" y="318" class="art-sign">1870</text>
+          </svg>
+          <figcaption>La lampadina: l'elettricità entra nelle fabbriche e nelle case.</figcaption>
+        </figure>
+      </header>
+
+      <div class="photo-strip reveal">
+        <p class="photo-kicker">Immagini dal vero · Seconda rivoluzione</p>
+        <div class="photo-grid">
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/seconda-catena-montaggio.jpg" alt="Operai al lavoro lungo la catena di montaggio della Ford nel 1913" width="1400" height="1010" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">La catena di montaggio Ford, 1913: ogni operaio compie un solo gesto, il prodotto scorre.</span>
+              <span class="photo-credit">Archivio fotografico · <a href="https://commons.wikimedia.org/wiki/File:Ford_assembly_line_-_1913_(restored).jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · pubblico dominio</span>
+            </figcaption>
+          </figure>
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/seconda-motore-scoppio.jpg" alt="Motore a combustione interna verde con volano, esposto in un museo" width="1400" height="1200" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">Un motore a scoppio: pistoni, volano e accensione. Il petrolio entra nella fabbrica e nell'automobile.</span>
+              <span class="photo-credit">Foto: Billy McCrorie · <a href="https://commons.wikimedia.org/wiki/File:Internal_Combustion_Engine_-_geograph.org.uk_-_7816701.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · CC BY-SA 2.0</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="era-body">
+        <div class="bridge-grid">
+          <article class="bridge-card reveal">
+            <span class="bridge-num">01</span>
+            <h3>Nuovi materiali, nuova energia</h3>
+            <p>Acciaio a buon mercato, chimica industriale, petrolio ed elettricità. Le fabbriche non devono più stare accanto alle miniere di carbone e le città si illuminano di notte.</p>
+          </article>
+          <article class="bridge-card reveal">
+            <span class="bridge-num">02</span>
+            <h3>La catena di montaggio</h3>
+            <p>Con l'organizzazione scientifica del lavoro di Taylor e la catena di montaggio introdotta da Ford nel 1913, il prodotto diventa standardizzato e alla portata di molti.</p>
+          </article>
+          <article class="bridge-card reveal">
+            <span class="bridge-num">03</span>
+            <h3>La comunicazione di massa</h3>
+            <p>Telefono, radio e cinema collegano milioni di persone. Nascono la pubblicità e la società dei consumi, con i suoi nuovi bisogni e le sue nuove disuguaglianze.</p>
+          </article>
+        </div>
+
+        <div class="assembly reveal" aria-hidden="true">
+          <div class="assembly-track">
+            <span class="crate c1"></span><span class="crate c2"></span><span class="crate c3"></span>
+            <span class="crate c1"></span><span class="crate c2"></span><span class="crate c3"></span>
+            <span class="crate c1"></span><span class="crate c2"></span><span class="crate c3"></span>
+            <span class="crate c1"></span><span class="crate c2"></span><span class="crate c3"></span>
+          </div>
+          <div class="assembly-belt"></div>
+        </div>
+        <p class="assembly-note">Produzione di massa · il nastro non si ferma mai</p>
+
+        <p class="bridge-outro reveal">Senza questa tappa non si capirebbe la terza rivoluzione: l'elettronica nasce dall'elettricità, e l'automazione nasce dalla catena di montaggio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TERZA ============ -->
+  <section class="era" id="terza" data-era="3">
+    <div class="wrap">
+      <header class="era-head reveal">
+        <div class="era-head-copy">
+          <p class="era-kicker"><span class="era-badge">III</span> Anni Settanta — anni Duemila</p>
+          <h2 class="era-title">La terza rivoluzione:<br><em>il digitale</em></h2>
+          <p class="era-sub">Transistor, microprocessori e reti. Il mondo comincia a funzionare a bit, oltre che a tonnellate.</p>
+        </div>
+        <figure class="era-art">
+          <svg viewBox="0 0 420 340" class="art-svg" aria-hidden="true">
+            <g class="circuits" fill="none" stroke="currentColor" stroke-width="2" opacity=".45">
+              <path d="M40 70 H120 V130"/>
+              <path d="M380 70 H320 V120"/>
+              <path d="M40 270 H110 V230"/>
+              <path d="M380 268 H330 V240"/>
+              <path d="M120 250 V300 H180"/>
+              <path d="M300 250 V302 H240"/>
+            </g>
+            <g fill="currentColor" opacity=".55">
+              <circle cx="40" cy="70" r="4"/><circle cx="380" cy="70" r="4"/>
+              <circle cx="40" cy="270" r="4"/><circle cx="380" cy="268" r="4"/>
+              <circle cx="120" cy="300" r="4"/><circle cx="300" cy="302" r="4"/>
+            </g>
+            <rect x="150" y="108" width="120" height="120" rx="14" fill="var(--accent-soft)" stroke="currentColor" stroke-width="2.5"/>
+            <rect x="176" y="134" width="68" height="68" rx="6" fill="none" stroke="currentColor" stroke-width="1.5" opacity=".6"/>
+            <g stroke="currentColor" stroke-width="2.5">
+              <path d="M166 108 V92M186 108 V92M206 108 V92M226 108 V92M246 108 V92"/>
+              <path d="M166 228 V244M186 228 V244M206 228 V244M226 228 V244M246 228 V244"/>
+              <path d="M150 124 H134M150 144 H134M150 164 H134M150 184 H134M150 204 H134"/>
+              <path d="M270 124 H286M270 144 H286M270 164 H286M270 184 H286M270 204 H286"/>
+            </g>
+            <text x="210" y="176" text-anchor="middle" class="art-chip-label">4004</text>
+            <g class="pulse-dots" fill="var(--accent)">
+              <circle cx="40" cy="70" r="3.5" class="pulse-node pn1"/>
+              <circle cx="380" cy="268" r="3.5" class="pulse-node pn2"/>
+              <circle cx="120" cy="300" r="3.5" class="pulse-node pn3"/>
+            </g>
+            <text x="52" y="318" class="art-sign">1971</text>
+          </svg>
+          <figcaption>Intel 4004: un intero processore su un solo chip.</figcaption>
+        </figure>
+      </header>
+
+      <div class="photo-strip reveal">
+        <p class="photo-kicker">Immagini dal vero · Terza rivoluzione</p>
+        <div class="photo-grid">
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/terza-transistor.jpg" alt="Il primo transistor, costruito nei Bell Labs nel 1947, su un supporto di plexiglass" width="1400" height="1049" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">Il primo transistor, Bell Labs 1947: minuscolo, sostituì le valvole e aprì l'era dell'elettronica.</span>
+              <span class="photo-credit">Foto: Windell Oskay · <a href="https://commons.wikimedia.org/wiki/File:The_First_Transistor_ever_made,_built_in_1947_-_Bell_Labs.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · CC BY 2.0</span>
+            </figcaption>
+          </figure>
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/terza-ibm-pc.jpg" alt="IBM Personal Computer del 1981 con monitor, tastiera e unità a dischetti" width="1400" height="875" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">L'IBM PC del 1981: il computer arriva sulla scrivania, non solo nel laboratorio.</span>
+              <span class="photo-credit">Foto: The wub · <a href="https://commons.wikimedia.org/wiki/File:IBM_PC,_1981,_Computer_History_Museum.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · CC BY-SA 4.0</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="era-body">
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>01</span> Il contesto</p>
+          <div class="chapter-copy">
+            <h3>Dal boom alla crisi</h3>
+            <p>Dalla seconda metà del Novecento, e soprattutto dagli anni Settanta, il mondo attraversa una nuova fase di trasformazione. Dopo le rivoluzioni basate sulla meccanizzazione e sull'elettricità, l'innovazione si concentra su elettronica, informatica e telecomunicazioni.</p>
+            <p>Nel secondo dopoguerra, tra gli anni Cinquanta e Sessanta, molti Paesi industrializzati vivono una fase di forte crescita economica. Ma all'inizio degli anni Settanta questo modello entra in difficoltà: nel <strong>1973</strong> la crisi petrolifera fa salire alle stelle il prezzo del petrolio e rivela i limiti dei sistemi produttivi tradizionali.</p>
+            <p>Le imprese sono costrette a cercare nuove soluzioni: investono in tecnologia per ridurre i costi, usare meglio le risorse e aumentare la produttività.</p>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>02</span> Il lavoro</p>
+          <div class="chapter-copy">
+            <h3>Dal fordismo al postfordismo</h3>
+            <p>Il modello fordista, basato sulla produzione di massa, sulla catena di montaggio e su prodotti standardizzati, viene affiancato dal <strong>postfordismo</strong>: un sistema più flessibile, capace di adattarsi alle richieste del mercato.</p>
+            <p>Computer, macchinari automatici e robot industriali controllano e velocizzano la produzione: più precisione, più qualità, tempi più brevi. La globalizzazione espande le aziende su scala internazionale, mentre la delocalizzazione sposta parte della produzione dove i costi sono inferiori.</p>
+            <p>Cresce il settore terziario — commercio, trasporti, comunicazione, servizi e informatica — e l'economia inizia a fondarsi sulla gestione delle informazioni.</p>
+            <div class="stats">
+              <div class="stat"><span class="stat-num">1947</span><span class="stat-label">invenzione del transistor</span></div>
+              <div class="stat"><span class="stat-num">1971</span><span class="stat-label">Intel 4004, primo microprocessore</span></div>
+              <div class="stat"><span class="stat-num">1989</span><span class="stat-label">la proposta del World Wide Web</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>03</span> La società</p>
+          <div class="chapter-copy">
+            <h3>Una nuova società dell'informazione</h3>
+            <p>I computer entrano nelle abitazioni, negli uffici e nelle scuole. L'istruzione cambia, con risorse digitali e materiali condivisi a distanza. Nascono professioni legate alla programmazione, alla gestione dei dati e alle telecomunicazioni.</p>
+            <p>Il progresso porta però anche difficoltà: l'automazione riduce alcuni lavori manuali e ripetitivi e rende necessarie nuove competenze. E non tutti hanno lo stesso accesso alle tecnologie: è il <strong>divario digitale</strong>, che può aumentare le disuguaglianze.</p>
+          </div>
+        </article>
+
+        <div class="lab reveal" aria-labelledby="railTitle">
+          <div class="lab-head">
+            <div>
+              <p class="lab-kicker">Linea del tempo interattiva</p>
+              <h3 id="railTitle">Le tappe dell'era informatica</h3>
+            </div>
+            <p class="lab-hint">Seleziona una tappa</p>
+          </div>
+          <div class="tech-rail">
+            <div class="rail-list" role="tablist" aria-label="Tappe dell'informatica">
+              <button class="rail-btn is-active" type="button" role="tab" aria-selected="true" data-step="0"><span class="rail-year">1947</span><span class="rail-name">Transistor</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="1"><span class="rail-year">1957</span><span class="rail-name">Sputnik 1</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="2"><span class="rail-year">1958</span><span class="rail-name">Circuito integrato</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="3"><span class="rail-year">1962</span><span class="rail-name">Telstar 1</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="4"><span class="rail-year">1969</span><span class="rail-name">ARPANET</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="5"><span class="rail-year">1971</span><span class="rail-name">Intel 4004</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="6"><span class="rail-year">1983</span><span class="rail-name">TCP/IP</span></button>
+              <button class="rail-btn" type="button" role="tab" aria-selected="false" data-step="7"><span class="rail-year">1989</span><span class="rail-name">World Wide Web</span></button>
+            </div>
+            <div class="rail-panel" id="railPanel" role="tabpanel" aria-live="polite">
+              <p class="rail-panel-year" id="railPanelYear">1947</p>
+              <h4 id="railPanelTitle">Il transistor</h4>
+              <p id="railPanelText">Inventato nei Bell Labs, sostituisce le valvole: i dispositivi elettronici diventano più piccoli, affidabili ed efficienti. È il mattone di tutta l'elettronica moderna.</p>
+              <p class="rail-foot" id="railPanelFoot">Elettronica · Stati Uniti</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="nota reveal">
+          <p class="nota-label">Da non confondere</p>
+          <p><strong>Internet</strong> è la rete globale che collega i computer tra loro. Il <strong>Web</strong> è uno dei servizi che funzionano attraverso quella rete: un sistema di documenti collegati da link, proposto da Tim Berners-Lee al CERN nel 1989.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ QUARTA ============ -->
+  <section class="era" id="quarta" data-era="4">
+    <div class="wrap">
+      <header class="era-head reveal">
+        <div class="era-head-copy">
+          <p class="era-kicker"><span class="era-badge">IV</span> 2011 — oggi · tutto il pianeta</p>
+          <h2 class="era-title">La quarta rivoluzione:<br><em>l'intelligenza</em></h2>
+          <p class="era-sub">Fisico, digitale e biologico si fondono. Le macchine non eseguono soltanto ordini: misurano, imparano, coordinano.</p>
+        </div>
+        <figure class="era-art">
+          <svg viewBox="0 0 420 340" class="art-svg" aria-hidden="true">
+            <g fill="none" stroke="currentColor">
+              <circle cx="210" cy="168" r="46" stroke-width="1.2" opacity=".5" stroke-dasharray="3 6" class="orbit"/>
+              <circle cx="210" cy="168" r="82" stroke-width="1" opacity=".3" stroke-dasharray="2 8" class="orbit-rev"/>
+              <circle cx="210" cy="168" r="118" stroke-width="1" opacity=".18" class="orbit"/>
+            </g>
+            <g stroke="currentColor" stroke-width="1.5" opacity=".45" class="net-lines">
+              <line x1="210" y1="168" x2="122" y2="96"/>
+              <line x1="210" y1="168" x2="308" y2="104"/>
+              <line x1="210" y1="168" x2="118" y2="242"/>
+              <line x1="210" y1="168" x2="306" y2="246"/>
+              <line x1="210" y1="168" x2="210" y2="56"/>
+              <line x1="210" y1="168" x2="210" y2="286"/>
+              <line x1="122" y1="96" x2="210" y2="56"/>
+              <line x1="308" y1="104" x2="210" y2="56"/>
+              <line x1="118" y1="242" x2="210" y2="286"/>
+              <line x1="306" y1="246" x2="210" y2="286"/>
+              <line x1="122" y1="96" x2="118" y2="242"/>
+              <line x1="308" y1="104" x2="306" y2="246"/>
+            </g>
+            <g fill="var(--paper-2)" stroke="currentColor" stroke-width="2">
+              <circle cx="210" cy="56" r="13"/><circle cx="122" cy="96" r="13"/>
+              <circle cx="308" cy="104" r="13"/><circle cx="118" cy="242" r="13"/>
+              <circle cx="306" cy="246" r="13"/><circle cx="210" cy="286" r="13"/>
+            </g>
+            <circle cx="210" cy="168" r="30" fill="var(--accent)"/>
+            <circle cx="210" cy="168" r="40" fill="none" stroke="var(--accent)" stroke-width="1" opacity=".5" class="ping"/>
+            <g fill="var(--accent)" class="net-pulses">
+              <circle cx="122" cy="96" r="3.5" class="pulse-node pn1"/>
+              <circle cx="308" cy="246" r="3.5" class="pulse-node pn2"/>
+              <circle cx="210" cy="286" r="3.5" class="pulse-node pn3"/>
+            </g>
+            <text x="52" y="318" class="art-sign">2011</text>
+          </svg>
+          <figcaption>Reti neurali: nodi che si scambiano dati in tempo reale.</figcaption>
+        </figure>
+      </header>
+
+      <div class="photo-strip reveal">
+        <p class="photo-kicker">Immagini dal vero · Quarta rivoluzione</p>
+        <div class="photo-grid">
+          <figure class="photo">
+            <div class="photo-frame">
+              <img class="photo-portrait" src="images/quarta-braccio-robot.jpg" alt="Braccio robotico industriale che tiene e lucida il corpo di una chitarra" width="1400" height="2100" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">Un braccio robotico leviga una chitarra: precisione e automazione nella fabbrica moderna.</span>
+              <span class="photo-credit">Foto: Henrysz · <a href="https://commons.wikimedia.org/wiki/File:Robotic_Arm_Polishing_Guitars_at_Martin_Guitar_Factory.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · CC BY 4.0</span>
+            </figcaption>
+          </figure>
+          <figure class="photo">
+            <div class="photo-frame">
+              <img src="images/quarta-data-center.jpg" alt="Corridoio tra i rack bianchi di una sala server" width="1400" height="934" loading="lazy">
+            </div>
+            <figcaption>
+              <span class="photo-cap">Una sala server: l'infrastruttura fisica che fa funzionare cloud e intelligenza artificiale.</span>
+              <span class="photo-credit">Foto: PiDatacenters · <a href="https://commons.wikimedia.org/wiki/File:Racks_Amravati_Data_Center.jpg" target="_blank" rel="noopener">Wikimedia Commons</a> · CC BY-SA 4.0</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="era-body">
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>01</span> La visione</p>
+          <div class="chapter-copy">
+            <h3>Fisico, digitale, biologico</h3>
+            <p>Dall'inizio del XXI secolo il mondo attraversa una nuova fase di trasformazione, nota come <strong>Quarta Rivoluzione Industriale</strong> o <strong>Industria 4.0</strong>. Dopo la meccanizzazione a vapore della prima, l'elettricità della seconda e l'informatica della terza, la fase attuale si basa sull'unione tra mondo fisico, digitale e biologico.</p>
+            <p>Non si tratta più soltanto di usare computer e robot per velocizzare il lavoro in fabbrica: si creano sistemi intelligenti in cui macchinari, sensori, software e persone comunicano in tempo reale, scambiandosi milioni di dati al secondo.</p>
+            <p>L'impatto investe produzione, lavoro, istruzione, medicina, relazioni sociali e vita quotidiana, fino a ridefinire i confini dell'economia globale.</p>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>02</span> Le origini</p>
+          <div class="chapter-copy">
+            <h3>Da Internet all'Industria 4.0</h3>
+            <p>Le radici affondano nei progressi di fine Novecento: diffusione globale di Internet, digitalizzazione dei dati, microprocessori sempre più potenti ed economici. Il punto di svolta arriva tra la fine degli anni Duemila e l'inizio degli anni Dieci, con l'esplosione degli smartphone, le reti mobili a banda larga (3G e 4G) e il cloud computing.</p>
+            <p>L'espressione <strong>Industria 4.0</strong> viene usata per la prima volta nel <strong>2011</strong> in Germania, alla Fiera di Hannover, in un piano strategico per digitalizzare la manifattura nazionale. Nel <strong>2016</strong> l'economista Klaus Schwab, fondatore del World Economic Forum, istituzionalizza il concetto di Quarta Rivoluzione Industriale: rispetto al passato, questa trasformazione è più veloce, più ampia e più sistemica.</p>
+            <div class="stats">
+              <div class="stat"><span class="stat-num">2011</span><span class="stat-label">nasce il termine Industria 4.0</span></div>
+              <div class="stat"><span class="stat-num">2016</span><span class="stat-label">Schwab e il World Economic Forum</span></div>
+              <div class="stat"><span class="stat-num">7</span><span class="stat-label">tecnologie abilitanti</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>03</span> La fabbrica</p>
+          <div class="chapter-copy">
+            <h3>La Smart Factory</h3>
+            <p>Nelle fabbriche intelligenti l'intero ecosistema produttivo viene ripensato alla luce della connettività totale. Mentre nella terza rivoluzione i macchinari operavano in modo isolato, eseguendo sequenze rigide, oggi gli impianti hanno un'intelligenza decentralizzata.</p>
+            <p>Grazie ai sensori <strong>IoT</strong> distribuiti su ogni componente, le macchine monitorano il proprio stato, rilevano variazioni termiche o vibrazioni anomale, comunicano con i sistemi gestionali e coordinano i flussi di materiale. La manutenzione diventa predittiva, gli scarti diminuiscono, i consumi si ottimizzano.</p>
+            <p>Si passa dalla produzione di massa alla <strong>personalizzazione di massa</strong>: ordini su misura per il singolo cliente, con tempi e costi vicini a quelli della produzione seriale.</p>
+          </div>
+        </article>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>04</span> Il lavoro</p>
+          <div class="chapter-copy">
+            <h3>Uomo e macchina, insieme</h3>
+            <p>Nelle fabbriche e nei magazzini si diffondono i <strong>cobot</strong>, robot collaborativi progettati per lavorare a stretto contatto con gli operatori in condizioni di sicurezza, sollevandoli dai compiti più usuranti e ripetitivi.</p>
+            <p>La digitalizzazione cambia anche il lavoro d'ufficio: cloud computing, <strong>smart working</strong> e lavoro da remoto permettono ai team di collaborare in tempo reale da qualsiasi parte del mondo, ridefinendo l'equilibrio tra vita professionale e privata.</p>
+          </div>
+        </article>
+
+        <div class="tech-block reveal">
+          <div class="block-head">
+            <p class="lab-kicker">Le tecnologie abilitanti</p>
+            <h3>Sette tecnologie, un unico sistema</h3>
+            <p class="block-sub">Passa il mouse o tocca una scheda per scoprire cosa fa.</p>
+          </div>
+          <div class="flip-grid">
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">01</span><span class="flip-title">IA &amp; Machine Learning</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">IA &amp; Machine Learning</span><span class="flip-text">Sistemi capaci di elaborare grandi volumi di dati, riconoscere pattern, apprendere e supportare decisioni in ogni settore.</span></span>
+              </span>
+            </button>
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">02</span><span class="flip-title">Internet of Things</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">Internet of Things</span><span class="flip-text">Oggetti fisici con sensori e attuatori che comunicano via Internet: controllo remoto e automazione di processi industriali e urbani.</span></span>
+              </span>
+            </button>
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">03</span><span class="flip-title">Big Data &amp; Cloud</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">Big Data &amp; Cloud</span><span class="flip-text">Moli enormi di dati archiviate ed elaborate su server distribuiti, con scalabilità, sicurezza e accesso immediato da ogni dispositivo.</span></span>
+              </span>
+            </button>
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">04</span><span class="flip-title">Digital Twin</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">Digital Twin</span><span class="flip-text">Repliche virtuali di oggetti, linee di produzione o interi impianti: simulazioni e test di stress senza rischi per la produzione reale.</span></span>
+              </span>
+            </button>
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">05</span><span class="flip-title">Stampa 3D</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">Stampa 3D</span><span class="flip-text">Manifattura additiva: oggetti creati strato su strato, meno sprechi di materiale e geometrie prima impossibili da realizzare.</span></span>
+              </span>
+            </button>
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">06</span><span class="flip-title">AR &amp; VR</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">AR &amp; VR</span><span class="flip-text">Informazioni digitali sovrapposte al mondo reale o ambienti virtuali immersivi: formazione tecnica e manutenzione avanzata.</span></span>
+              </span>
+            </button>
+            <button class="flip" type="button">
+              <span class="flip-inner">
+                <span class="flip-face flip-front"><span class="flip-num">07</span><span class="flip-title">5G &amp; Cybersecurity</span><span class="flip-hint">Scopri →</span></span>
+                <span class="flip-face flip-back"><span class="flip-title">5G &amp; Cybersecurity</span><span class="flip-text">Reti ultrarapide a bassissima latenza, protette da protocolli di difesa informatica per tutelare dati aziendali e personali.</span></span>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <article class="chapter reveal">
+          <p class="chapter-label"><span>05</span> La società</p>
+          <div class="chapter-copy">
+            <h3>Città, salute, scuola</h3>
+            <p>Le <strong>Smart City</strong> usano sensori ambientali e di mobilità per ottimizzare il traffico, ridurre l'inquinamento, gestire l'illuminazione e favorire consumi energetici sostenibili.</p>
+            <p>In sanità, intelligenza artificiale, genomica e dispositivi indossabili consentono diagnosi precoci, terapie mirate e monitoraggio costante dei pazienti cronici. Nell'istruzione, le piattaforme digitali rendono l'apprendimento più personalizzato e abbattono le barriere geografiche.</p>
+          </div>
+        </article>
+
+        <div class="risk-block reveal">
+          <div class="block-head">
+            <p class="lab-kicker">L'altra faccia</p>
+            <h3>Quattro sfide da non ignorare</h3>
+          </div>
+          <ul class="risk-grid">
+            <li><span class="risk-num">01</span><h4>Futuro del lavoro</h4><p>L'automazione sostituisce anche mansioni impiegatizie: serve formazione continua (<em>lifelong learning</em>) e nuove competenze digitali.</p></li>
+            <li><span class="risk-num">02</span><h4>Privacy ed etica</h4><p>La raccolta pervasiva di dati personali e algoritmi non regolamentati rischiano di perpetuare pregiudizi e discriminazioni.</p></li>
+            <li><span class="risk-num">03</span><h4>Disuguaglianze</h4><p>Il divario tecnologico può accentuare le disparità tra Paesi e, all'interno delle stesse comunità, escludere chi resta indietro.</p></li>
+            <li><span class="risk-num">04</span><h4>Impatto ambientale</h4><p>Data center e infrastrutture di calcolo consumano enormi quantità di energia e acqua per il raffreddamento: la sostenibilità è urgente.</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONFRONTO ============ -->
+  <section class="compare" id="confronto" data-era="4">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="kicker">Faccia a faccia</p>
+        <h2 class="h2">Terza e Quarta: <em>cosa cambia davvero</em></h2>
+        <p class="sec-sub">Due rivoluzioni vicine nel tempo, ma profondamente diverse nel modo di produrre, analizzare i dati e mettere l'uomo accanto alla macchina.</p>
+      </div>
+
+      <div class="cmp-controls" role="group" aria-label="Evidenzia una colonna del confronto">
+        <button class="cmp-btn is-active" type="button" data-col="terza" aria-pressed="true">Terza rivoluzione</button>
+        <button class="cmp-btn" type="button" data-col="quarta" aria-pressed="false">Quarta rivoluzione</button>
+      </div>
+
+      <div class="cmp" data-focus="terza">
+        <div class="cmp-row cmp-head">
+          <div class="cmp-topic">Ambito</div>
+          <div class="cmp-cell terza"><span class="cmp-tag">III</span> Dal 1970</div>
+          <div class="cmp-cell quarta"><span class="cmp-tag">IV</span> Dal 2011</div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-topic">Periodo e tecnologie chiave</div>
+          <div class="cmp-cell terza">Seconda metà del Novecento: elettronica, informatica, microprocessori e prime reti di computer.</div>
+          <div class="cmp-cell quarta">Inizio XXI secolo: interconnessione globale, intelligenza artificiale, IoT e sistemi digitali avanzati.</div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-topic">Strumenti e infrastrutture</div>
+          <div class="cmp-cell terza">Personal computer, robot industriali rigidi e isolati, telecomunicazioni tradizionali, prime fasi del Web.</div>
+          <div class="cmp-cell quarta">IA, Internet of Things, Big Data, cloud computing, cobot, stampa 3D e reti 5G.</div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-topic">Gestione dei dati</div>
+          <div class="cmp-cell terza">Dati memorizzati su supporti locali o singoli computer, analizzati statisticamente in differita.</div>
+          <div class="cmp-cell quarta">Raccolta continua tramite sensori intelligenti ed elaborazione in tempo reale con algoritmi predittivi.</div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-topic">Modello produttivo</div>
+          <div class="cmp-cell terza">Automazione flessibile, delocalizzazione industriale, produzione orientata alle economie di scala.</div>
+          <div class="cmp-cell quarta">Smart Factory, manutenzione predittiva, personalizzazione di massa, filiere agili e interconnesse.</div>
+        </div>
+        <div class="cmp-row">
+          <div class="cmp-topic">Interazione uomo-macchina</div>
+          <div class="cmp-cell terza">L'operatore programma e sorveglia macchine confinate in aree protette e separate.</div>
+          <div class="cmp-cell quarta">Collaborazione diretta tra operai e cobot, interfacce intuitive e sistemi che apprendono dall'esperienza.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5.0 ============ -->
+  <section class="fifty" id="cinque" data-era="4">
+    <div class="wrap">
+      <div class="fifty-intro reveal">
+        <p class="kicker light">Oltre l'Industria 4.0</p>
+        <h2 class="h2 light-h2">Industria 5.0:<br><em>rimettere la persona al centro</em></h2>
+        <p class="fifty-lede">Il paradigma successivo non rinnega le conquiste digitali: ne corregge la traiettoria. La tecnologia deve adattarsi all'essere umano, rispettare i limiti del pianeta e rendere i sistemi più capaci di assorbire le crisi.</p>
+      </div>
+      <div class="pillars">
+        <article class="pillar reveal"><span class="pillar-num">01</span><h3>Human-centric</h3><p>La tecnologia deve valorizzare talento e creatività delle persone, non ridurle a un'appendice della macchina.</p></article>
+        <article class="pillar reveal"><span class="pillar-num">02</span><h3>Sostenibilità</h3><p>Processi progettati entro i limiti ecologici del pianeta: meno impronta di carbonio, più economia circolare.</p></article>
+        <article class="pillar reveal"><span class="pillar-num">03</span><h3>Resilienza</h3><p>Ecosistemi industriali capaci di assorbire gli shock sistemici, garantendo occupazione e servizi essenziali.</p></article>
+      </div>
+      <blockquote class="fifty-quote reveal">«Il successo delle future generazioni dipenderà dalla nostra capacità di governare l'innovazione guidandola verso il bene comune.»</blockquote>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-inner">
+    <div class="foot-brand">
+      <p class="foot-title">Quattro rivoluzioni, <em>un solo filo</em>.</p>
+      <p class="foot-note">Sito divulgativo realizzato a partire dagli approfondimenti sulla prima, terza e quarta rivoluzione industriale. Testi rielaborati; le illustrazioni sono disegni vettoriali originali. Le fotografie provengono da Wikimedia Commons e riportano autore e licenza in didascalia.</p>
+    </div>
+    <div class="foot-col">
+      <p class="foot-label">Fonti principali</p>
+      <ul>
+        <li><a href="https://it.wikipedia.org/wiki/Terza_rivoluzione_industriale" target="_blank" rel="noopener">Wikipedia · Terza rivoluzione industriale</a></li>
+        <li><a href="https://www.computerhistory.org/siliconengine/timeline/" target="_blank" rel="noopener">Computer History Museum · Timeline</a></li>
+        <li><a href="https://www.internetsociety.org/internet/history-internet/short-history-of-the-internet/" target="_blank" rel="noopener">Internet Society · A short history of the Internet</a></li>
+        <li><a href="https://home.cern/science/computing/birth-web" target="_blank" rel="noopener">CERN · The birth of the Web</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <p class="foot-label">Quarta rivoluzione</p>
+      <ul>
+        <li><a href="https://www.weforum.org/focus/fourth-industrial-revolution/" target="_blank" rel="noopener">World Economic Forum</a></li>
+        <li><a href="https://www.ibm.com/think/topics/industry-4-0" target="_blank" rel="noopener">IBM Think · Industry 4.0</a></li>
+        <li><a href="https://research-and-innovation.ec.europa.eu/research-area/industrial-research-and-innovation/industry-50_en" target="_blank" rel="noopener">Commissione Europea · Industry 5.0</a></li>
+        <li><a href="https://www.geopop.it/il-motore-e-la-macchina-a-vapore-storia-della-rivoluzione-di-produzione-e-trasporti/" target="_blank" rel="noopener">Geopop · La macchina a vapore</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>Storia · Tecnologia · Società</span>
+    <span id="year">2026</span>
+    <a href="#top">Torna su ↑</a>
+  </div>
+</footer>
+
+<noscript><p class="noscript">Questo sito usa JavaScript per le animazioni e le parti interattive. I contenuti restano leggibili anche senza.</p></noscript>
+<script src="script.js"></script>
+</body>
+</html>
